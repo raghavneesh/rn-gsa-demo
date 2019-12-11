@@ -34,6 +34,8 @@ target 'GirlScoutDemo' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'react-native-unity-view', :path => '../node_modules/@asmadsen/react-native-unity-view'
+
   target 'GirlScoutDemoTests' do
     inherit! :search_paths
     # Pods for testing

@@ -24,7 +24,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import UnityView, { MessageHandler, UnityModule } from 'react-native-unity-view';
+import UnityView, { MessageHandler, UnityModule } from '@asmadsen/react-native-unity-view';
 
 const App: () => React$Node = () => {
   const sendMessage = (message) => {
@@ -43,6 +43,7 @@ const App: () => React$Node = () => {
     console.log('On unity message called', hander);
 
   }
+
   return (
     <View style={{ flex: 1, backgroundColor: '#fff' }}>
       <UnityView
@@ -54,14 +55,14 @@ const App: () => React$Node = () => {
       <View style={{ flex: 1, justifyContent: 'flex-end' }}>
         <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-end' }}>
           <View style={{ marginRight: 10 }} >
-            <Button title="Award Code" onPress={() => sendMessage('AWARD')}></Button>
+            <Button title="Give Badge" onPress={() => sendMessage('AWARD')}></Button>
           </View>
           <View>
-            <Button title="Outfit Code" onPress={() => sendMessage('OUTFIT')}></Button>
+            <Button title="Change Outfit" onPress={() => sendMessage('OUTFIT')}></Button>
           </View>
         </View>
         <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-end', marginTop: 20, marginBottom: 20 }}>
-          <Button title="Celebrate Code" onPress={() => sendMessage('CELEBRATE')}></Button>
+          <Button title="Celebrate" onPress={() => sendMessage('CELEBRATE')}></Button>
         </View>
       </View>
 

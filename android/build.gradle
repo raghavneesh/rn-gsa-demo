@@ -31,7 +31,7 @@ allprojects {
             url("$rootDir/../node_modules/jsc-android/dist")
         }
         flatDir {
-            dirs project(':UnityExport').file('libs')
+            dirs "${project(':UnityExport').projectDir}/libs"
         }
 
         google()
